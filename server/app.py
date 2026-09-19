@@ -16,6 +16,8 @@ CORS(app)
 from asset_routes import asset_bp
 from models import User, Asset, Transaction
 from auth_routes import auth_bp
+from transaction_routes import transaction_bp
+app.register_blueprint(transaction_bp, url_prefix="/api")
 app.register_blueprint(auth_bp, url_prefix="/api")
 app.register_blueprint(asset_bp, url_prefix="/api")
 
