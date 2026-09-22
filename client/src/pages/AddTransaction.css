@@ -1,0 +1,154 @@
+.add-transaction-page {
+  min-height: 100vh;
+  background-color: #0f0f10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.add-transaction-card {
+  background-color: #1a1a1e;
+  border: 1px solid #26262b;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+  color: #e5e5e5;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.back-link {
+  color: #808085;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.back-link:hover {
+  color: #ff7a1a;
+}
+
+.add-transaction-card h1 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  color: #a0a0a5;
+  margin-bottom: 6px;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #0f0f10;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: #ff7a1a;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #ff7a1a;
+  font-size: 13px;
+  margin-top: 8px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.new-asset-form {
+  background-color: #16161a;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.secondary-btn {
+  background-color: #26262b;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 8px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: #0f0f10;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #a0a0a5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-btn.active.buy {
+  background-color: rgba(46, 204, 113, 0.15);
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.toggle-btn.active.sell {
+  background-color: rgba(231, 76, 60, 0.15);
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7a1a;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.success-text {
+  color: #2ecc71;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.empty-state {
+  color: #808085;
+  font-size: 13px;
+}
