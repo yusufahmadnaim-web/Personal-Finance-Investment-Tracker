@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axiosClient from "../api/axiosClient";
 import { useAuth } from "../context/AuthContext";
 import "./Dashboard.css";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 function Dashboard() {
   const [portfolio, setPortfolio] = useState([]);
@@ -68,6 +69,27 @@ function Dashboard() {
             <h2 className="card-value">{transactions.length}</h2>
           </div>
         </section>
+
+        {portfolio.length > 0 && (
+        <section className="chart-section">
+        <h3>Portfolio Allocation</h3>
+        <div className="chart-card">
+        <ResponsiveContainer width="100%" height={280}>
+        <BarChart data={portfolio}>
+          <BarChart data={portfolio} style={{ backgroundColor: "transparent" }}></BarChart>
+          <CartesianGrid strokeDasharray="3 3" stroke="#26262b" />
+          <XAxis dataKey="ticker_symbol" stroke="#808085" />
+          <YAxis stroke="#808085" />
+          <Tooltip
+            contentStyle={{ backgroundColor: "#1a1a1e", border: "1px solid #26262b", borderRadius: "8px" }}
+            labelStyle={{ color: "#e5e5e5" }}
+          />
+          <Bar dataKey="total_invested" fill="#ff7a1a" radius={[6, 6, 0, 0]} />
+         </BarChart>
+         </ResponsiveContainer>
+         </div>
+         </section>
+)}
 
         <section className="portfolio-section">
           <h3>Your Holdings</h3>
